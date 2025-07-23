@@ -1,0 +1,70 @@
+/* src/styles/bookdetail.css */
+
+.bookdetail-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.3s ease;
+}
+
+.bookdetail-container h2 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.caption {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.book-info p {
+  font-size: 1rem;
+  margin: 0.6rem 0;
+}
+
+.book-paragraph {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
+  background-color: #3498db;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.back-btn:hover {
+  background-color: #2b7bb9;
+}
+
+/* Dark Mode Support */
+body.dark .bookdetail-container {
+  background-color: #2a2a2a;
+  color: #eee;
+}
+
+body.dark .book-paragraph {
+  background-color: #3a3a3a;
+  color: #ccc;
+}
+
+body.dark .back-btn {
+  background-color: #2980b9;
+}

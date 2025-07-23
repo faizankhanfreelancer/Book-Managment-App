@@ -1,0 +1,177 @@
+/* src/styles/booklist.css */
+
+.booklist-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.booklist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booklist-header h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+.toggle-dark {
+  padding: 0.5rem 1rem;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.toggle-dark:hover {
+  background-color: #111;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.add-btn {
+  padding: 0.5rem 1rem;
+  background-color: #27ae60;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.add-btn:hover {
+  background-color: #219150;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.book-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.book-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.book-card p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+}
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.actions a,
+.actions button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.view {
+  background-color: #3498db;
+  color: white;
+}
+
+.edit {
+  background-color: #f39c12;
+  color: white;
+}
+
+.delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.actions a:hover,
+.actions button:hover {
+  opacity: 0.85;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark .book-card {
+  background-color: #484343;
+  border-color: #444;
+}
+
+body.dark .booklist-header h1 {
+  color: #f1f1f1;
+}
+.book-card p strong {
+  color: #2ecc71; /* Green price highlight */
+}
+
+
+.top-navbar {
+  position: fixed;
+  top: 0;
+  left: 220px;
+  right: 0;
+  height: 39px;
+  background-color: #005f73;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.top-navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.top-navbar li a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.top-navbar li a:hover {
+  color: #ffd166;
+}
+
+/* Offset the content below the navbar */
+.booklist-container {
+  padding-top: 80px !important;
+}
